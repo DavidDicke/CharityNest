@@ -12,7 +12,7 @@ class Report < ApplicationRecord
   validate :check_evaluation
   validates :teaser, presence: true, length: { maximum: 300 }
 
-  enum report_type: { Article: 0, Evaluation: 1 }
+  enum :report_type, { Article: 0, Evaluation: 1 }
 
   private
 
