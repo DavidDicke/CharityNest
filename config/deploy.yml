@@ -96,7 +96,7 @@ builder:
 accessories:
   db:
     image: postgres:16
-    host: 91.99.146.25
+    host: dickes-design.com
     # Change to 3306 to expose port to the world instead of just local network.
     port: "127.0.0.1:3306:3306"
     env:
@@ -109,9 +109,9 @@ accessories:
       - db/production.sql:/docker-entrypoint-initdb.d/setup.sql
     directories:
       - data:/var/lib/mysql
-  redis:
-    image: redis:7.0
-    host: 192.168.0.2
-    port: 6379
-    directories:
-      - data:/data
+  # redis:
+  #   image: redis:7.0
+  #   host: 192.168.0.2
+  #   port: 6379
+  #   directories:
+  #     - data:/data
