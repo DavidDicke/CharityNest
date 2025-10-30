@@ -51,6 +51,8 @@ env:
     # Match this to any external database server to configure Active Record correctly
     # Use intervall_timer-db for a db accessory server on same machine via local kamal docker network.
     DB_HOST: charitynest-db
+    POSTGRES_USER: charitynest
+    POSTGRES_DB: charitynest_production
 
     # Log everything from Rails
     RAILS_LOG_LEVEL: debug
@@ -102,7 +104,8 @@ accessories:
     port: "127.0.0.1:5432:5432"
     env:
       clear:
-        POSTGRES_HOST_AUTH_METHOD: trust
+        POSTGRES_USER: charitynest
+        POSTGRES_DB: charitynest_production
       secret:
         - CHARITY_NEST_DATABASE_PASSWORD
     files:
