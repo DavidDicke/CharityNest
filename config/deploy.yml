@@ -106,7 +106,7 @@ accessories:
         POSTGRES_USER: charitynest
         POSTGRES_DB: charitynest_production
       secret:
-        - CHARITY_NEST_DATABASE_PASSWORD
+        - POSTGRES_PASSWORD
     files:
       # - config/mysql/production.cnf:/etc/mysql/my.cnf
       - db/production.sql:/docker-entrypoint-initdb.d/setup.sql
