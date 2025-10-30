@@ -79,6 +79,6 @@ test:
 #
 production:
   <<: *default
-  database: charity_nest_production
-  username: charity_nest
-  password: <%= ENV["CHARITY_NEST_DATABASE_PASSWORD"] %>
+  database: <%= ENV["POSTGRES_DB"] %>
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
