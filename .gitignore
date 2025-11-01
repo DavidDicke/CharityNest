@@ -45,3 +45,5 @@ dump.rdb
 # Ignore key files for decrypting credentials and more.
 /config/*.key
 
+# Ignore Kamal Secrets
+.kamal/secrets
